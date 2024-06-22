@@ -1,14 +1,3 @@
-### GitHub Title
-
-**TikTok Video Downloader using Python and yt-dlp**
-
-### GitHub Description
-
-A Python script for downloading TikTok videos using the `yt-dlp` library. Easily download your favorite TikTok videos and save them to your specified directory.
-
-### README
-
-```markdown
 # TikTok Video Downloader using Python and yt-dlp
 
 This repository contains a Python script that allows you to download TikTok videos using the `yt-dlp` library. The script is simple to use and can save videos to a specified directory.
