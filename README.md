@@ -82,21 +82,6 @@ This example downloads the specified TikTok video and saves it in the `tiktok_vi
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-```
 
-### Keywords
-
-```text
-TikTok
-TikTok downloader
-video downloader
-yt-dlp
-Python
-video download script
-Python script
-download TikTok videos
-video quality
-download directory
-```
 
 
