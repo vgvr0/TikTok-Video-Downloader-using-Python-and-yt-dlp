@@ -1,6 +1,6 @@
  # TikTok Video Downloader using Python and yt-dlp
 
-![TikTok Cover][https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoK5bZR4NJLyUSmKjo9rAOSvkOlaIemh0MKA&s]
+![TikTok Cover](https://brandemia.org/contenido/subidas/2023/01/1-2017-1024x576.jpg)
 
 <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoK5bZR4NJLyUSmKjo9rAOSvkOlaIemh0MKA&s" alt="TikTok Cover" width="400" height="250">
 
