@@ -1,6 +1,6 @@
  # TikTok Video Downloader using Python and yt-dlp
 
-![TikTok Cover](https://brandemia.org/contenido/subidas/2023/01/1-2017-1024x576.jpg](https://cdn.pixabay.com/photo/2021/01/30/06/42/tiktok-5962992_960_720.png)
+![TikTok Cover](https://brandemia.org/contenido/subidas/2023/01/1-2017-1024x576.jpg)
 
 This repository contains a Python script that allows you to download TikTok videos using the `yt-dlp` library. The script is simple to use and can save videos to a specified directory.
 
