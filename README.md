@@ -33,7 +33,7 @@ A powerful and efficient Python tool for downloading TikTok videos with advanced
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/tiktok-downloader-pro.git
+git clone https://github.com/vgvr0/TikTok-Video-Downloader-using-Python-and-yt-dlp
 cd tiktok-downloader-pro
 ```
 
