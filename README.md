@@ -1,94 +1,126 @@
- # TikTok Video Downloader using Python and yt-dlp
-
+# 🎵 TikTok Video Downloader Pro
 ![TikTok Cover](LogoTikTok.png)
 
-This repository contains a Python script that allows you to download TikTok videos using the `yt-dlp` library. The script is simple to use and can save videos to a specified directory.
+A powerful and efficient Python tool for downloading TikTok videos with advanced features and error handling.
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=green&labelColor=green)
-![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Telegram](https://img.shields.io/badge/telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)
+[![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)](https://www.python.org/)
+[![PyCharm](https://img.shields.io/badge/pycharm-143?style=for-the-badge&logo=pycharm&logoColor=black&color=green&labelColor=green)](https://www.jetbrains.com/pycharm/)
+[![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)](https://git-scm.com/)
+[![Telegram](https://img.shields.io/badge/telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white)](https://telegram.org/)
+[![yt-dlp](https://img.shields.io/badge/yt--dlp-FF0000?style=for-the-badge&logo=youtube&logoColor=white)](https://github.com/yt-dlp/yt-dlp)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-## Features
+## ✨ Features
 
-- Download TikTok videos in the best available format.
-- Automatically create a save directory if it does not exist.
-- Handle download errors gracefully.
+- 📥 Download TikTok videos in highest quality available
+- 🎯 Custom filename support with timestamps
+- 🗂️ Automatic directory management
+- 🔄 Progress tracking with real-time updates
+- 🛡️ Robust error handling and validation
+- 🌐 Browser cookie integration for better compatibility
+- 📝 Detailed logging and status reporting
 
-## Prerequisites
+## 🚀 Prerequisites
 
-- Python 3.x
-- `yt-dlp` library
+- Python 3.7 or higher
+- Required packages:
+  ```
+  yt-dlp>=2023.3.4
+  typing>=3.7.4
+  ```
 
-## Installation
+## 📦 Installation
 
-1. Install `yt-dlp`:
-    ```sh
-    pip install yt-dlp
-    ```
-
-2. Clone this repository or download the script file.
-
-## Usage
-
-Save the script below to a file, e.g., `download_tiktok.py`.
-
-```python
-import yt_dlp
-import os
-
-def download_tiktok_video(video_url, save_path='tiktok_videos'):
-    # Ensure the save directory exists
-    if not os.path.exists(save_path):
-        os.makedirs(save_path)
-
-    # Configure yt-dlp options
-    ydl_opts = {
-        'outtmpl': os.path.join(save_path, '%(id)s.%(ext)s'),
-        'format': 'best',
-    }
-
-    try:
-        # Create a yt-dlp object and download the video
-        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-            info = ydl.extract_info(video_url, download=True)
-            filename = ydl.prepare_filename(info)
-            print(f"Video successfully downloaded: {filename}")
-    
-    except Exception as e:
-        print(f"Error downloading video: {str(e)}")
-
-# Example usage
-video_url = "https://www.tiktok.com/@zachking/video/6768504823336815877?embed_source=121374463%2C121439635%2C121433650%2C121404358%2C121351166%2C121331973%2C120811592%2C120810756%3Bnull%3Bembed_blank&refer=embed&referer_url=marketing4all.es%2Flistas%2Fvideos-mas-vistos-en-tiktok-2024%2F&referer_video_id=6768504823336815877"
-download_tiktok_video(video_url)
+1. Clone the repository:
+```bash
+git clone https://github.com/yourusername/tiktok-downloader-pro.git
+cd tiktok-downloader-pro
 ```
 
-## Running the Script
-
-1. Save the script to a file, e.g., `download_tiktok.py`.
-2. Run the script:
-    ```sh
-    python download_tiktok.py
-    ```
-3. The script will download the specified TikTok video and save it in the `tiktok_videos` directory (or any directory you specify).
-
-## Parameters
-
-- `video_url`: URL of the TikTok video.
-- `save_path`: Directory where the video will be saved (default: `'tiktok_videos'`).
-
-## Example
-
-```python
-video_url = "https://www.tiktok.com/@zachking/video/6768504823336815877?embed_source=121374463%2C121439635%2C121433650%2C121404358%2C121351166%2C121331973%2C120811592%2C120810756%3Bnull%3Bembed_blank&refer=embed&referer_url=marketing4all.es%2Flistas%2Fvideos-mas-vistos-en-tiktok-2024%2F&referer_video_id=6768504823336815877"
-download_tiktok_video(video_url)
+2. Create a virtual environment (optional but recommended):
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-This example downloads the specified TikTok video and saves it in the `tiktok_videos` directory.
+3. Install dependencies:
+```bash
+pip install -r requirements.txt
+```
 
-## License
+## 💻 Usage
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+### Basic Usage
 
+```python
+from tiktok_downloader import TikTokDownloader
 
+# Initialize downloader
+downloader = TikTokDownloader()
 
+# Download single video
+video_url = "https://www.tiktok.com/@username/video/1234567890"
+downloader.download_video(video_url)
+```
+
+### Advanced Usage
+
+```python
+# Custom save location and filename
+downloader = TikTokDownloader(save_path='my_tiktoks')
+downloader.download_video(video_url, custom_name="dance_video")
+
+# Download multiple videos
+urls = [
+    "https://www.tiktok.com/@user1/video/1234567890",
+    "https://www.tiktok.com/@user2/video/0987654321"
+]
+for url in urls:
+    downloader.download_video(url)
+```
+
+## 🛠️ Configuration Options
+
+| Parameter | Description | Default |
+|-----------|-------------|---------|
+| save_path | Directory to save videos | 'tiktok_videos' |
+| custom_name | Custom name for the video | None |
+| use_cookies | Use browser cookies | True |
+| quiet_mode | Suppress progress output | False |
+
+## 📋 Example Output
+
+```
+Downloading: 45.2% at 1.2 MB/s ETA: 00:15
+Download completed, finalizing...
+Video successfully downloaded: my_tiktoks/dance_video_20240106_123045.mp4
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 🙏 Acknowledgments
+
+- [yt-dlp](https://github.com/yt-dlp/yt-dlp) for the amazing download capabilities
+- TikTok for providing the content platform
+- All contributors and users of this project
+
+## ⚠️ Disclaimer
+
+This tool is for educational purposes only. Make sure to comply with TikTok's terms of service and respect content creators' rights when using this tool.
+
+## 📞 Support
+
+If you encounter any issues or have questions:
+- Open an issue on GitHub
+- Contact us via Telegram
+- Check our documentation
