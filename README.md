@@ -118,9 +118,3 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 This tool is for educational purposes only. Make sure to comply with TikTok's terms of service and respect content creators' rights when using this tool.
 
-## 📞 Support
-
-If you encounter any issues or have questions:
-- Open an issue on GitHub
-- Contact us via Telegram
-- Check our documentation
